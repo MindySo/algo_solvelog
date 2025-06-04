@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -17,8 +19,9 @@ public class Main {
 				graph[i] = Integer.parseInt(st.nextToken());
 			}
 
-			int[] visited = new int[N + 1]; // 0 = 방문 안함, 1 = 방문함, 2 = true, 3 = false
-			Stack<Integer> stk = new Stack<>();
+			// byte로 하면 메모리 1/4
+			byte[] visited = new byte[N + 1]; // 0 = 방문 안함, 1 = 방문함, 2 = true, 3 = false
+			Deque<Integer> stk = new ArrayDeque<>();
 			int cnt = 0;
 			
 			int next;
