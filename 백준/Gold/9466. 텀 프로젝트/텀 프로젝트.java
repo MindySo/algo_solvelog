@@ -52,9 +52,10 @@ public class Main {
 					do {
 						check = stk.pop();		// true나 false는 그냥 보냄
 					} while (visited[check] != 1);
+
+					visited[check] = 3;
 				}
 				
-				visited[check] = 3;
 				while(!stk.isEmpty()) {
 					visited[stk.pop()] = 3;	// 나머지는 모두 사이클 아님(false) 표시 
 				}
