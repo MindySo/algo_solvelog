@@ -9,6 +9,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
+		StringBuilder sb = new StringBuilder();
 		int T = Integer.parseInt(br.readLine().trim());
 		for (int tc = 1; tc <= T; tc++) {
 			int N = Integer.parseInt(br.readLine().trim());
@@ -53,9 +54,11 @@ public class Main {
 					unionMain = union[unionA];
 				}
 				
-				System.out.println(friendCnt[unionMain]);
+				sb.append(friendCnt[unionMain]).append("\n");
 			}
-		}
+		}	// for(tc)
+		
+		System.out.println(sb);
 	}
 	
 	static int findUnion(int no) {
