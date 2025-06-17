@@ -48,10 +48,10 @@ public class Main {
 					union[unionA] = unionMain;
 				}else if(unionA < unionB){
 					unionMain = unionA;
-					friendCnt[unionMain] += friendCnt[union[unionB]];
+					friendCnt[unionMain] += friendCnt[unionB];
 					union[unionB] = unionMain;
 				}else {
-					unionMain = union[unionA];
+					unionMain = unionA;
 				}
 				
 				sb.append(friendCnt[unionMain]).append("\n");
