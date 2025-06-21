@@ -1,163 +1,141 @@
 import java.io.*;
-import java.math.BigInteger;
 import java.util.*;
 
 public class Main {
 	static int N;
-	static BigInteger[][] map;
-	static BigInteger maxVal;
+	static int maxVal;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		N = Integer.parseInt(br.readLine().trim());
-		map = new BigInteger[N][N];
-		int input;
+		int[][] map = new int[N][N];
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < N; j++) {
-				input = Integer.parseInt(st.nextToken());
-				map[i][j] = BigInteger.valueOf(input);
+				map[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 
-		maxVal = BigInteger.ZERO;
-		DFS(0);
+		maxVal = 0;
+		DFS(0, map);
 
 		System.out.println(maxVal);
-
 	}// main()
 
-	static void DFS(int depth) {
+	static void DFS(int depth, int[][] map) {
 		if (depth == 5) {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
-					maxVal = maxVal.max(map[i][j]);
+					maxVal = Math.max(maxVal, map[i][j]);
 				}
 			}
 			return;
 		}
 
-		BigInteger[][] backTrackMap = new BigInteger[N][N];
-		for (int i = 0; i < N; i++) {
-			backTrackMap[i] = Arrays.copyOf(map[i], N);
-		}
-
-		left(depth);
-		backTrack(backTrackMap);
-
-		right(depth);
-		backTrack(backTrackMap);
-
-		up(depth);
-		backTrack(backTrackMap);
-
-		down(depth);
-		backTrack(backTrackMap);
+		DFS(depth + 1, left(map));
+		DFS(depth + 1, right(map));
+		DFS(depth + 1, up(map));
+		DFS(depth + 1, down(map));
 	}// DFS()
 
-	static void backTrack(BigInteger[][] backTrackMap) {
-		for (int i = 0; i < N; i++) {
-			map[i] = Arrays.copyOf(backTrackMap[i], N);
-		}
-	}// backTrack()
-
-	static BigInteger curr;
-	static boolean merged;
-	
-	static void left(int depth) {
+	static int[][] left(int[][] map) {
+		int[][] newMap = new int[N][N];
 		for (int i = 0; i < N; i++) {
 			int j = 0;
 			int idx = 0;
-			merged = false;
+			boolean merged = false;
 			while (idx < N) {
-				if (map[i][idx].equals(BigInteger.ZERO)) {
+				if (map[i][idx] == 0) {
 					idx++;
 					continue;
-				} else if (j >= 1 && !merged && map[i][j - 1].equals(map[i][idx])) {
-					map[i][j - 1] = map[i][idx++].multiply(BigInteger.TWO);
+				} else if (j >= 1 && !merged && newMap[i][j - 1] == map[i][idx]) {
+					newMap[i][j - 1] = map[i][idx++] * 2;
 					merged = true;
 				} else {
-					map[i][j++] = map[i][idx++];
+					newMap[i][j++] = map[i][idx++];
 					merged = false;
 				}
 			}
 			while (j < N) {
-				map[i][j++] = BigInteger.ZERO;
+				newMap[i][j++] = 0;
 			}
 		}
-		DFS(depth + 1);
+		return newMap;
 	}// left()
 
-	static void right(int depth) {
+	static int[][] right(int[][] map) {
+		int[][] newMap = new int[N][N];
 		for (int i = 0; i < N; i++) {
 			int j = N - 1;
 			int idx = N - 1;
-			merged = false;
+			boolean merged = false;
 			while (idx >= 0) {
-				if (map[i][idx].equals(BigInteger.ZERO)) {
+				if (map[i][idx] == 0) {
 					idx--;
 					continue;
-				} else if (j < N - 1 && !merged && map[i][j + 1].equals(map[i][idx])) {
-					map[i][j + 1] = map[i][idx--].multiply(BigInteger.TWO);
+				} else if (j < N - 1 && !merged && newMap[i][j + 1] == map[i][idx]) {
+					newMap[i][j + 1] = map[i][idx--] * 2;
 					merged = true;
 				} else {
-					map[i][j--] = map[i][idx--];
+					newMap[i][j--] = map[i][idx--];
 					merged = false;
 				}
 			}
 			while (j >= 0) {
-				map[i][j--] = BigInteger.ZERO;
+				newMap[i][j--] = 0;
 			}
 		}
-		DFS(depth + 1);
+		return newMap;
 	}// right()
 
-	static void up(int depth) {
+	static int[][] up(int[][] map) {
+		int[][] newMap = new int[N][N];
 		for (int i = 0; i < N; i++) {
 			int j = 0;
 			int idx = 0;
-			merged = false;
+			boolean merged = false;
 			while (idx < N) {
-				if (map[idx][i].equals(BigInteger.ZERO)) {
+				if (map[idx][i] == 0) {
 					idx++;
 					continue;
-				} else if (j >= 1 && !merged && map[j - 1][i].equals(map[idx][i])) {
-					map[j - 1][i] = map[idx++][i].multiply(BigInteger.TWO);
+				} else if (j >= 1 && !merged && newMap[j - 1][i] == map[idx][i]) {
+					newMap[j - 1][i] = map[idx++][i] * 2;
 					merged = true;
 				} else {
-					map[j++][i] = map[idx++][i];
+					newMap[j++][i] = map[idx++][i];
 					merged = false;
 				}
 			}
 			while (j < N) {
-				map[j++][i] = BigInteger.ZERO;
+				newMap[j++][i] = 0;
 			}
 		}
-		DFS(depth + 1);
+		return newMap;
 	}// up()
 
-	static void down(int depth) {
+	static int[][] down(int[][] map) {
+		int[][] newMap = new int[N][N];
 		for (int i = 0; i < N; i++) {
 			int j = N - 1;
 			int idx = N - 1;
-			merged = false;
+			boolean merged = false;
 			while (idx >= 0) {
-				if (map[idx][i].equals(BigInteger.ZERO)) {
+				if (map[idx][i] == 0) {
 					idx--;
 					continue;
-				} else if (j < N - 1 && !merged && map[j + 1][i].equals(map[idx][i])) {
-					map[j + 1][i] = map[idx--][i].multiply(BigInteger.TWO);
+				} else if (j < N - 1 && !merged && newMap[j + 1][i] == map[idx][i]) {
+					newMap[j + 1][i] = map[idx--][i] * 2;
 					merged = true;
 				} else {
-					map[j--][i] = map[idx--][i];
+					newMap[j--][i] = map[idx--][i];
 					merged = false;
 				}
 			}
 			while (j >= 0) {
-				map[j--][i] = BigInteger.ZERO;
+				newMap[j--][i] = 0;
 			}
 		}
-		DFS(depth + 1);
+		return newMap;
 	}// down()
 }
