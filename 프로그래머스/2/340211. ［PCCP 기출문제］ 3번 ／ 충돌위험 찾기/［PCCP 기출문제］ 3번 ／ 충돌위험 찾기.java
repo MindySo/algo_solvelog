@@ -1,68 +1,82 @@
 import java.util.*;
-
 class Solution {
-    static 
+    static class Robot {
+        int r, c, next;
+        int[] route;
+    }
+    static int[][] map;
+    static int[][] garages;
+    static Set<Integer> checkSet;
+    static Set<Robot> doneSet;
+    static int crash;
     
     public int solution(int[][] points, int[][] routes) {
-        Map<String, Integer> map = new HashMap<>();
-        
-        Set<String>[] setArr = new HashSet[routes.length + 1];
-        for(int i = 1; i < routes.length + 1; i++){
-            setArr[i] = new HashSet<>();
-        }
+        List<Robot> robots = new ArrayList();
+        map = new int[101][101];
+        garages = points;
+        checkSet = new HashSet();
+        doneSet = new HashSet();
+        crash = 0;
         
         for(int i = 0; i < routes.length; i++){
-            int count = 1;
-            for(int j = 0; j < routes[i].length - 1; j++){
-                int startPoint = routes[i][j]; //2
-                int endPoint = routes[i][j + 1]; //3
-                
-                int startR = points[startPoint - 1][0];
-                int startC = points[startPoint - 1][1];
-                int endR = points[endPoint - 1][0];
-                int endC = points[endPoint - 1][1];
-                int no = i + 1;
-                count--;
-                
-                if(startR <= endR){
-                    for(int r = startR; r <= endR; r++){
-                        setArr[no].add(r + " " + startC + " " + count++);
-                    }
-                }else{
-                    for(int r = startR; r >= endR; r--){
-                        setArr[no].add(r + " " + startC + " " + count++);
-                    }
-                }
-                    
-                if(startC < endC){
-                    for(int c = startC + 1; c <= endC; c++){
-                        setArr[no].add(endR + " " + c + " " + count++);
-                    }
-                }else if(startC > endC){
-                    for(int c = startC - 1; c >= endC; c--){
-                        setArr[no].add(endR + " " + c + " " + count++);
-                    }
-                }
+            Robot robot = new Robot();
+            robot.route = routes[i];
+            robot.next = 1;
+            robot.r = garages[robot.route[0] - 1][0];
+            robot.c = garages[robot.route[0] - 1][1];
+            robots.add(robot);
+            if(++map[robot.r][robot.c] == 2) crash++;
+        }
+        
+        while(true){
+            checkSet.clear();
+            doneSet.clear();
+            
+            for(Robot r : robots){
+                if(r.next != 0) move(r);
+            }
+            
+            if(checkSet.isEmpty()) break;
+            
+            for(int check : checkSet){
+                if(map[check / 101][check % 101] >= 2) crash++;
+            }
+            
+            for(Robot r : doneSet){
+                map[r.r][r.c]--;
             }
         }
         
-        for(int i = 1; i < routes.length + 1; i++){
-            for(String s : setArr[i]){
-                if(map.containsKey(s)){
-                    map.put(s, map.get(s) + 1);
-                }
-                else{
-                    map.put(s, 0);
-                }
-            }
+        return crash;
+    }
+    
+    public void move(Robot r){
+        int point = r.route[r.next] - 1;
+        int nextR = garages[point][0];
+        int nextC = garages[point][1];
+        
+        map[r.r][r.c]--;
+        
+        if(r.r > nextR){
+            r.r--;
+        }else if(r.r < nextR){
+            r.r++;
+        }else if(r.c > nextC){
+            r.c--;
+        }else if(r.c < nextC){
+            r.c++;
         }
         
-        int answer = 0;
-        for(String key : map.keySet()){
-            if(map.get(key) > 0){
-                answer++;
+        map[r.r][r.c]++;
+        checkSet.add(r.r * 101 + r.c);
+        
+        if(r.r == nextR && r.c == nextC){
+            if(r.next < r.route.length - 1){
+                r.next++;
+            }else{
+                r.next = 0;
+                doneSet.add(r);
             }
         }
-        return answer;
     }
 }
