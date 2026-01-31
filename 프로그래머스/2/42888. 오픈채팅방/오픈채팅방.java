@@ -25,24 +25,22 @@ class Solution {
             String uid = st.nextToken();
             
             if(!leaved){
-                String name = st.nextToken();
-                map.put(uid, name);
+                map.put(uid, st.nextToken());
             }
             
-            newRecord[idx][1] = behav;
-            newRecord[idx++][0] = uid;
+            newRecord[idx][0] = uid;
+            newRecord[idx++][1] = behav;
         }
         
         String[] answer = new String[answerLength];
-        idx = 0;
         StringBuilder sb;
+        idx = 0;
         for(String[] rec : newRecord){
-            sb = new StringBuilder();
-            sb.append(map.get(rec[0])).append("님이 ");
             if(rec[1].charAt(0) == 'C'){
                 continue;
             }
-            sb.append(rec[1]);
+            sb = new StringBuilder();
+            sb.append(map.get(rec[0])).append("님이 ").append(rec[1]);
             answer[idx++] = sb.toString();
         }
         
