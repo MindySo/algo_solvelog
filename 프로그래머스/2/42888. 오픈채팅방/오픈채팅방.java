@@ -4,32 +4,26 @@ class Solution {
         Map<String, String> map = new HashMap();
         String[][] newRecord = new String[record.length][2];
         
-        StringTokenizer st;
         int idx = 0;
         int answerLength = 0;
         boolean leaved;
         for(String str : record){
-            st = new StringTokenizer(str);
-            leaved = false;
+            String[] rec = str.split(" ");
             
-            String behav = st.nextToken();
-            if(behav.charAt(0) == 'E'){
-                behav = "들어왔습니다.";
+            if(rec[0].charAt(0) == 'E'){
+                rec[0] = "들어왔습니다.";
                 answerLength++;
-            }else if(behav.charAt(0) == 'L'){
-                behav = "나갔습니다.";
+            }else if(rec[0].charAt(0) == 'L'){
+                rec[0] = "나갔습니다.";
                 answerLength++;
-                leaved = true;
             }
             
-            String uid = st.nextToken();
-            
-            if(!leaved){
-                map.put(uid, st.nextToken());
+            if(rec.length != 2){
+                map.put(rec[1], rec[2]);
             }
             
-            newRecord[idx][0] = uid;
-            newRecord[idx++][1] = behav;
+            newRecord[idx][0] = rec[1];
+            newRecord[idx++][1] = rec[0];
         }
         
         String[] answer = new String[answerLength];
