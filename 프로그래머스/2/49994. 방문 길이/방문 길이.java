@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(String dirs) {
-        int[][] map = new int[11][11];
         boolean[][] visited = new boolean[122][122];
         int[] dr = {-1, 1, 0, 0};
         int[] dc = {0, 0, 1, -1};
