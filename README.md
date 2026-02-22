@@ -12,18 +12,15 @@
             <td align="center">
                 <br>
                 <b>Contribution of algo_solvelog</b>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#">
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=MindySo&repo=algo_solvelog&theme=default&hide_border=true&hide_total_contributions=true&hide_longest_streak=true&currStreakLabel=black&date_format=Y.n.j&card_width=120" height="210" /></a>
-                <a href="#">
-                <img src="https://github-readme-activity-graph.vercel.app/graph?username=MindySo&repo=algo_solvelog&theme=github-light&days=40&point=FB8C00&line=FBC897&area_color=FB8C00&area=true&hide_border=true&radius=7&hide_title=true" height="210" /></a>
-                <br>
-                <a href="#">
-                <img src="https://img.shields.io/badge/%20programmers%20-1%2C538%20점-27344A?style=flat&labelColor=555555" /></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://solved.ac/mindyso7151">
-                <img src="https://mazassumnida.wtf/api/mini/generate_badge?boj=mindyso7151" /></a>
+                <div>
+                    <a href="#"><img src="https://github-readme-streak-stats.herokuapp.com/?user=MindySo&repo=algo_solvelog&theme=default&hide_border=true&hide_total_contributions=true&hide_longest_streak=true&currStreakLabel=black&date_format=Y.n.j&card_width=120" width="15%" /></a>
+                    <a href="#"><img src="https://github-readme-activity-graph.vercel.app/graph?username=MindySo&repo=algo_solvelog&theme=github-light&days=40&point=FB8C00&line=FBC897&area_color=FB8C00&area=true&hide_border=true&radius=7&hide_title=true" width="80%" /></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://img.shields.io/badge/%20programmers%20-1%2C538%20점-27344A?style=flat&labelColor=555555" /></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://solved.ac/mindyso7151"><img src="https://mazassumnida.wtf/api/mini/generate_badge?boj=mindyso7151" /></a>
+                </div>
                 <br>
             </td>
         </tr>
