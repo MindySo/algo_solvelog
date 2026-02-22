@@ -49,10 +49,9 @@ def build_section(counts):
 
     # 총 문제 수 헤더
     lines.append('')
-    lines.append(f'### 해결한 문제 : &nbsp; <big><big><big>{total}</big></big></big> 개'
-                 f' &nbsp;&nbsp; <small><small>🔃 updated by GitHub Actions</small></small>')
+    lines.append(f'### 해결한 문제 : {total} 개')
     lines.append('')
-    lines.append('<br>')
+    lines.append(f'<sub>🔃 updated by GitHub Actions</sub>')
     lines.append('')
 
     # 테이블

@@ -1,6 +1,4 @@
-<div align="left">
-
-# ✏️ algo_solvelog &nbsp; <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logoColor=white" />&nbsp;&nbsp;<img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white" />
+# ✏️ algo_solvelog &nbsp; <sub><a href="#"><img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logoColor=white" /></a>&nbsp;&nbsp;<a href="#"><img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white" /></a></sub>
 
 하루에 한 문제씩 고민한 흔적을 기록하는 저장소입니다.
 
@@ -8,17 +6,30 @@
 
 <div align="center">
 
-### <l>Contribution of </l>algo_solvelog
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=MindySo&repo=algo_solvelog&theme=default&hide_border=true&hide_total_contributions=true&hide_longest_streak=true&currStreakLabel=black&date_format=Y.n.j&card_width=140" height="180" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MindySo&repo=algo_solvelog&theme=github-light&days=40&point=FB8C00&line=FBC897&area_color=FB8C00&area=true&hide_border=true&radius=7&hide_title=true" height="180" />
-
-<br>
-
-<img src="https://img.shields.io/badge/%20programmers%20-1%2C538%20점-27344A?style=flat&labelColor=555555" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://solved.ac/mindyso7151">
-<img src="https://mazassumnida.wtf/api/mini/generate_badge?boj=mindyso7151" /></a>
+<table>
+    <thead>
+        <tr>
+            <td align="center">
+                <br>
+                <b>Contribution of algo_solvelog</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=MindySo&repo=algo_solvelog&theme=default&hide_border=true&hide_total_contributions=true&hide_longest_streak=true&currStreakLabel=black&date_format=Y.n.j&card_width=120" height="180" /></a>
+                <a href="#">
+                <img src="https://github-readme-activity-graph.vercel.app/graph?username=MindySo&repo=algo_solvelog&theme=github-light&days=40&point=FB8C00&line=FBC897&area_color=FB8C00&area=true&hide_border=true&radius=7&hide_title=true" height="180" /></a>
+                &nbsp;&nbsp;
+                <br>
+                <a href="#">
+                <img src="https://img.shields.io/badge/%20programmers%20-1%2C538%20점-27344A?style=flat&labelColor=555555" /></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://solved.ac/mindyso7151">
+                <img src="https://mazassumnida.wtf/api/mini/generate_badge?boj=mindyso7151" /></a>
+                <br>
+            </td>
+        </tr>
+    </thead>
+</table>
 
 <!-- <img src="https://mazassumnida.wtf/api/v2/generate_badge?boj=mindyso7151"/> -->
 
@@ -31,9 +42,9 @@
 
 <!-- COUNT_START -->
 
-### 해결한 문제 : &nbsp; <big><big><big>210</big></big></big> 개 &nbsp;&nbsp; <small><small>🔃 updated by GitHub Actions</small></small>
+### 해결한 문제 : 210 개
 
-<br>
+<sub>🔃 updated by GitHub Actions</sub>
 
 <table>
   <thead>
