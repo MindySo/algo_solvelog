@@ -38,7 +38,7 @@
 
 <!-- COUNT_START -->
 
-### 해결한 문제 : 210 개
+### 해결한 문제 : 211 개
 
 <sub>🔃 updated by GitHub Actions</sub>
 
@@ -71,7 +71,7 @@
     </tr>
     <tr>
       <td align="center">Lv. 2</td>
-      <td align="center">97</td>
+      <td align="center">98</td>
     </tr>
     <tr>
       <td align="center">Lv. 3</td>
@@ -87,7 +87,7 @@
     </tr>
     <tr>
       <td colspan="2" align="center"><b>총합</b></td>
-      <td align="center"><b>210</b></td>
+      <td align="center"><b>211</b></td>
     </tr>
   </tbody>
 </table>
