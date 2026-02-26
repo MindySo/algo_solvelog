@@ -5,6 +5,7 @@ import urllib.parse
 from datetime import datetime, timedelta
 
 
+
 BAEKJOON_LEVELS = [
     ("Silver", "Silver"),
     ("Gold", "Gold"),

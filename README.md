@@ -1,6 +1,6 @@
 # ✏️ algo_solvelog &nbsp; <sub><a href="#"><img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logoColor=white" /></a>&nbsp;&nbsp;<a href="#"><img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white" /></a></sub>
 
-하루에 한 문제씩 고민한 흔적을 기록하는 저장소입니다. <br>
+하루에 한 문제씩 고민한 흔적을 기록하는 저장소입니다.<br>
 <sub>🔃 updated by GitHub Actions</sub>
 
 <br>
