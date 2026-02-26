@@ -143,15 +143,15 @@ def _get_github_dir_url(platform, level, prob_name):
 
 
 def build_stats_section(data_by_date, streak, start_date, end_date):
-    """streak 표시 + 최근 7일 문제 테이블 HTML 생성"""
+    """streak 표시 + 최근 6일 문제 테이블 HTML 생성"""
 
     if streak > 0 and start_date and end_date:
         streak_html = f'<b>🔥Current Streak</b><br><h3>{streak}일째</h3><sub>{start_date} ~ {end_date}</sub>'
     else:
         streak_html = '<b>🔥Current Streak</b><br><h3>0일째</h3>'
 
-    # 문제 푼 날만, 최근 7일, 오래된 순(왼→오)
-    sorted_dates = sorted(data_by_date.keys(), reverse=True)[:7][::-1]
+    # 문제 푼 날만, 최근 6일, 오래된 순(왼→오)
+    sorted_dates = sorted(data_by_date.keys(), reverse=True)[:6][::-1]
 
     if not sorted_dates:
         return f'<div align="center">{streak_html}</div>'
