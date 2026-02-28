@@ -144,15 +144,15 @@ def _get_github_dir_url(platform, level, prob_name):
 
 
 def build_stats_section(data_by_date, streak, start_date, end_date):
-    """streak 표시 + 최근 6일 문제 테이블 HTML 생성"""
+    """streak 표시 + 최근 7일 문제 테이블 HTML 생성"""
 
     if streak > 0 and start_date and end_date:
         streak_html = f'<b>🔥Current Streak</b><br><h3>{streak}일째</h3><sub>{start_date} ~ {end_date}</sub>'
     else:
         streak_html = '<b>🔥Current Streak</b><br><h3>0일째</h3>'
 
-    # 문제 푼 날만, 최근 6일, 오래된 순(왼→오)
-    sorted_dates = sorted(data_by_date.keys(), reverse=True)[:6][::-1]
+    # 문제 푼 날만, 최근 7일, 오래된 순(왼→오)
+    sorted_dates = sorted(data_by_date.keys(), reverse=True)[:7][::-1]
 
     if not sorted_dates:
         return f'<div align="center">{streak_html}</div>'
@@ -170,14 +170,14 @@ def build_stats_section(data_by_date, streak, start_date, end_date):
         count = len(info['problems'])
         last = info['last_problem']
 
-        date_cells += f'<td align="center">{date_label}</td>'
+        date_cells += f'<td align="center"><sub>{date_label}</sub></td>'
         count_cells += f'<td align="center">{count}</td>'
 
         if last:
             platform, level, prob_name = last
             prob_url, prob_text = _get_problem_url(platform, prob_name)
             dir_url = _get_github_dir_url(platform, level, prob_name)
-            link_cells += f'<td align="center"><a href="{prob_url}">{prob_text}</a></td>'
+            link_cells += f'<td align="center"><sub><a href="{prob_url}">{prob_text}</a></sub></td>'
             dir_cells += f'<td align="center"><a href="{dir_url}">🔗</a></td>'
         else:
             link_cells += '<td align="center">-</td>'
@@ -186,7 +186,7 @@ def build_stats_section(data_by_date, streak, start_date, end_date):
     lines = [
         '<table>',
         '    <tbody>',
-        f'        <tr><td rowspan="5" align="center" valign="middle" width="160">{streak_html}</td></tr>',
+        f'        <tr><td rowspan="5" align="center" valign="middle" width="155">{streak_html}</td></tr>',
         f'        <th align="center">날짜</th>{date_cells}</tr>',
         f'        <tr><th align="center">문제 수</th>{count_cells}</tr>',
         f'        <tr><th align="center">문제 링크</th>{link_cells}</tr>',
