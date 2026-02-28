@@ -157,10 +157,10 @@ def build_stats_section(data_by_date, streak, start_date, end_date):
     if not sorted_dates:
         return f'<div align="center">{streak_html}</div>'
 
-    header_row = '<th align="center">날짜</th>'
-    count_row = '<th align="center">문제 수</th>'
-    link_row = '<th align="center">문제 링크</th>'
-    dir_row = '<th align="center">풀이 링크</th>'
+    date_cells = ''
+    count_cells = ''
+    link_cells = ''
+    dir_cells = ''
 
     for date in sorted_dates:
         dt = datetime.strptime(date, '%Y.%m.%d')
@@ -170,35 +170,29 @@ def build_stats_section(data_by_date, streak, start_date, end_date):
         count = len(info['problems'])
         last = info['last_problem']
 
-        header_row += f'<th align="center">{date_label}</th>'
-        count_row += f'<td align="center">{count}</td>'
+        date_cells += f'<td align="center">{date_label}</td>'
+        count_cells += f'<td align="center">{count}</td>'
 
         if last:
             platform, level, prob_name = last
             prob_url, prob_text = _get_problem_url(platform, prob_name)
             dir_url = _get_github_dir_url(platform, level, prob_name)
-            link_row += f'<td align="center"><a href="{prob_url}">{prob_text}</a></td>'
-            dir_row += f'<td align="center"><a href="{dir_url}">🔗</a></td>'
+            link_cells += f'<td align="center"><a href="{prob_url}">{prob_text}</a></td>'
+            dir_cells += f'<td align="center"><a href="{dir_url}">🔗</a></td>'
         else:
-            link_row += '<td align="center">-</td>'
-            dir_row += '<td align="center">-</td>'
-
-    weekly_table = (
-        f'<table>'
-        f'<thead><tr>{header_row}</tr></thead>'
-        f'<tbody>'
-        f'<tr>{count_row}</tr>'
-        f'<tr>{link_row}</tr>'
-        f'<tr>{dir_row}</tr>'
-        f'</tbody>'
-        f'</table>'
-    )
+            link_cells += '<td align="center">-</td>'
+            dir_cells += '<td align="center">-</td>'
 
     lines = [
-        '<table><tbody><tr>',
-        f'<td align="center" valign="middle" width="160">{streak_html}</td>',
-        f'<td>{weekly_table}</td>',
-        '</tr></tbody></table>',
+        '<table>',
+        '    <tbody>',
+        f'        <tr><td rowspan="5" align="center" valign="middle" width="160">{streak_html}</td></tr>',
+        f'        <th align="center">날짜</th>{date_cells}</tr>',
+        f'        <tr><th align="center">문제 수</th>{count_cells}</tr>',
+        f'        <tr><th align="center">문제 링크</th>{link_cells}</tr>',
+        f'        <tr><th align="center">풀이 링크</th>{dir_cells}</tr>',
+        '    </tbody>',
+        '</table>',
     ]
     return '\n'.join(lines)
 
