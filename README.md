@@ -15,11 +15,11 @@
 <!-- STATS_START -->
 <table>
     <tbody>
-        <tr><td rowspan="5" align="center" valign="middle" width="155"><b>🔥Current Streak</b><br><h3>87일째</h3><sub>2026.1.1 ~ 2026.3.28</sub></td></tr>
-        <th align="center">날짜</th><td align="center"><sub>26.03.22</sub></td><td align="center"><sub>26.03.23</sub></td><td align="center"><sub>26.03.24</sub></td><td align="center"><sub>26.03.25</sub></td><td align="center"><sub>26.03.26</sub></td><td align="center"><sub>26.03.27</sub></td><td align="center"><sub>26.03.28</sub></td></tr>
-        <tr><th align="center">문제 수</th><td align="center">3</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr>
-        <tr><th align="center">문제 링크</th><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/12979">p.12979</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/1832">p.1832</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/60061">p.60061</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/150367">p.150367</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/70130">p.70130</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/118669">p.118669</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/12931">p.12931</a></sub></td></tr>
-        <tr><th align="center">풀이 링크</th><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/12979.%E2%80%85%EA%B8%B0%EC%A7%80%EA%B5%AD%E2%80%85%EC%84%A4%EC%B9%98">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/1832.%E2%80%85%EB%B3%B4%ED%96%89%EC%9E%90%E2%80%85%EC%B2%9C%EA%B5%AD">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/60061.%E2%80%85%EA%B8%B0%EB%91%A5%EA%B3%BC%E2%80%85%EB%B3%B4%E2%80%85%EC%84%A4%EC%B9%98">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/150367.%E2%80%85%ED%91%9C%ED%98%84%E2%80%85%EA%B0%80%EB%8A%A5%ED%95%9C%E2%80%85%EC%9D%B4%EC%A7%84%ED%8A%B8%EB%A6%AC">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/70130.%E2%80%85%EC%8A%A4%ED%83%80%E2%80%85%EC%88%98%EC%97%B4">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/118669.%E2%80%85%EB%93%B1%EC%82%B0%EC%BD%94%EC%8A%A4%E2%80%85%EC%A0%95%ED%95%98%EA%B8%B0">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/12931.%E2%80%85%EC%9E%90%EB%A6%BF%EC%88%98%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0">🔗</a></td></tr>
+        <tr><td rowspan="5" align="center" valign="middle" width="155"><b>🔥Current Streak</b><br><h3>88일째</h3><sub>2026.1.1 ~ 2026.3.29</sub></td></tr>
+        <th align="center">날짜</th><td align="center"><sub>26.03.23</sub></td><td align="center"><sub>26.03.24</sub></td><td align="center"><sub>26.03.25</sub></td><td align="center"><sub>26.03.26</sub></td><td align="center"><sub>26.03.27</sub></td><td align="center"><sub>26.03.28</sub></td><td align="center"><sub>26.03.29</sub></td></tr>
+        <tr><th align="center">문제 수</th><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr>
+        <tr><th align="center">문제 링크</th><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/1832">p.1832</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/60061">p.60061</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/150367">p.150367</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/70130">p.70130</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/118669">p.118669</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/12931">p.12931</a></sub></td><td align="center"><sub><a href="https://school.programmers.co.kr/learn/courses/30/lessons/12932">p.12932</a></sub></td></tr>
+        <tr><th align="center">풀이 링크</th><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/1832.%E2%80%85%EB%B3%B4%ED%96%89%EC%9E%90%E2%80%85%EC%B2%9C%EA%B5%AD">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/60061.%E2%80%85%EA%B8%B0%EB%91%A5%EA%B3%BC%E2%80%85%EB%B3%B4%E2%80%85%EC%84%A4%EC%B9%98">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/150367.%E2%80%85%ED%91%9C%ED%98%84%E2%80%85%EA%B0%80%EB%8A%A5%ED%95%9C%E2%80%85%EC%9D%B4%EC%A7%84%ED%8A%B8%EB%A6%AC">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/70130.%E2%80%85%EC%8A%A4%ED%83%80%E2%80%85%EC%88%98%EC%97%B4">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/118669.%E2%80%85%EB%93%B1%EC%82%B0%EC%BD%94%EC%8A%A4%E2%80%85%EC%A0%95%ED%95%98%EA%B8%B0">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/12931.%E2%80%85%EC%9E%90%EB%A6%BF%EC%88%98%E2%80%85%EB%8D%94%ED%95%98%EA%B8%B0">🔗</a></td><td align="center"><a href="https://github.com/MindySo/algo_solvelog/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/12932.%E2%80%85%EC%9E%90%EC%97%B0%EC%88%98%E2%80%85%EB%92%A4%EC%A7%91%EC%96%B4%E2%80%85%EB%B0%B0%EC%97%B4%EB%A1%9C%E2%80%85%EB%A7%8C%EB%93%A4%EA%B8%B0">🔗</a></td></tr>
     </tbody>
 </table>
 <!-- STATS_END -->
@@ -45,7 +45,7 @@
 
 <!-- COUNT_START -->
 
-### 해결한 문제 : 251 개
+### 해결한 문제 : 252 개
 
 <table>
   <thead>
@@ -72,7 +72,7 @@
     <tr>
       <td rowspan="5" align="center" valign="middle"><b>프로그래머스</b></td>
       <td align="center">Lv. 1</td>
-      <td align="center">13</td>
+      <td align="center">14</td>
     </tr>
     <tr>
       <td align="center">Lv. 2</td>
@@ -92,7 +92,7 @@
     </tr>
     <tr>
       <td colspan="2" align="center"><b>총합</b></td>
-      <td align="center"><b>251</b></td>
+      <td align="center"><b>252</b></td>
     </tr>
   </tbody>
 </table>
