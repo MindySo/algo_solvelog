@@ -25,7 +25,7 @@
 <!-- STATS_END -->
                 </div>
                 <div>
-                    <a href="#"><img src="https://img.shields.io/badge/%20programmers%20-1%2C538%20점-27344A?style=flat&labelColor=555555" /></a>
+                    <a href="#"><img src="https://img.shields.io/badge/%20programmers%20-1656점-27344A?style=flat&labelColor=555555" /></a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="https://solved.ac/mindyso7151"><img src="https://mazassumnida.wtf/api/mini/generate_badge?boj=mindyso7151" /></a>
                 </div>
